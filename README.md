@@ -26,7 +26,7 @@ cp config/.env.example config/.env
 npm run dev
 ```
 
-Server will run on `http://localhost:5000` (configurable via `PORT` in `.env`)
+Server will run on `http://localhost:3000` (configurable via `PORT` in `.env`)
 
 ---
 
@@ -78,7 +78,7 @@ DATABASE_PASSWORD=your_password
 JWT_SECRET=your_secret_key_here (use: openssl rand -hex 32)
 
 # Server
-PORT=5000
+PORT=3000
 NODE_ENV=development
 ```
 
@@ -86,7 +86,7 @@ NODE_ENV=development
 
 ##  API Endpoints Overview
 
-**Base URL**: `http://localhost:5000/api`
+**Base URL**: `http://localhost:3000/api`
 
 All endpoints are fully documented in **Swagger UI** at `/api-docs` with request/response examples and interactive testing.
 
@@ -98,7 +98,7 @@ All endpoints are fully documented in **Swagger UI** at `/api-docs` with request
 | `POST` | `/auth/login` | Login user | ❌ |
 | `POST` | `/auth/logout` | Logout user | ❌ |
 
- [View in Swagger](http://localhost:5000/api-docs)
+ [View in Swagger](http://localhost:3000/api-docs)
 
 ---
 
@@ -115,7 +115,7 @@ All endpoints are fully documented in **Swagger UI** at `/api-docs` with request
 
 **Query Parameters**: `?category=nosej&search=shirt&sort=price-asc`
 
-📖 [View in Swagger](http://localhost:5000/api-docs)
+📖 [View in Swagger](http://localhost:3000/api-docs)
 
 ---
 
@@ -129,7 +129,7 @@ All endpoints are fully documented in **Swagger UI** at `/api-docs` with request
 | `DELETE` | `/cart` | Clear entire cart |
 | `DELETE` | `/cart/:productId` | Remove item from cart |
 
- [View in Swagger](http://localhost:5000/api-docs)
+ [View in Swagger](http://localhost:3000/api-docs)
 
 ---
 
@@ -141,7 +141,7 @@ All endpoints are fully documented in **Swagger UI** at `/api-docs` with request
 | `POST` | `/wishlist` | Add product to wishlist |
 | `DELETE` | `/wishlist/:productId` | Remove from wishlist |
 
- [View in Swagger](http://localhost:5000/api-docs)
+ [View in Swagger](http://localhost:3000/api-docs)
 
 ---
 
@@ -157,7 +157,7 @@ All endpoints are fully documented in **Swagger UI** at `/api-docs` with request
 
 **Status Flow**: `pending` → `confirmed` → `shipped` → `delivered`
 
- [View in Swagger](http://localhost:5000/api-docs)
+ [View in Swagger](http://localhost:3000/api-docs)
 
 ---
 
@@ -170,7 +170,7 @@ All endpoints are fully documented in **Swagger UI** at `/api-docs` with request
 | `POST` | `/users/change-password` | Change password |
 | `DELETE` | `/users/account` | Delete account |
 
- [View in Swagger](http://localhost:5000/api-docs)
+ [View in Swagger](http://localhost:3000/api-docs)
 
 ---
 
@@ -194,12 +194,12 @@ The API uses **JWT (JSON Web Tokens)** for authentication.
 ### Example Usage
 ```bash
 # Login and get token
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST http://localhost:3000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"ahmed@example.com","password":"password123"}'
 
 # Use token to access protected endpoint
-curl -X GET http://localhost:5000/api/users/profile \
+curl -X GET http://localhost:3000/api/users/profile \
   -H "Authorization: Bearer <token>"
 ```
 
@@ -315,7 +315,7 @@ The Swagger interface provides:
 ##  Quick Testing
 
 ### Using Swagger UI (Recommended)
-1. Open http://localhost:5000/api-docs
+1. Open http://localhost:3000/api-docs
 2. Click any endpoint to expand it
 3. Click **"Try it out"** button
 4. Fill in parameters
@@ -365,5 +365,5 @@ ISC License
 ##  Related
 
 - **Frontend**: [Nosej Frontend](../frontend/README.md)
-- **API Docs**: http://localhost:5000/api-docs
+- **API Docs**: http://localhost:3000/api-docs
 - **Live Demo**: https://nosej.netlify.app/
